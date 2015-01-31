@@ -1,0 +1,447 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "@timestamp": {
+      "@id": "http://open.fda.gov/ns/faers#@timestamp", 
+      "@type": "xsd:date"
+    }, 
+    "@case_number": {
+      "@id": "http://open.fda.gov/ns/faers#@case_number", 
+      "@type": "xsd:string"
+    }, 
+    "companynumb": {
+      "@id": "http://open.fda.gov/ns/faers#companynumb", 
+      "@type": "xsd:string"
+    }, 
+    "duplicate": {
+      "@id": "http://open.fda.gov/ns/faers#duplicate", 
+      "@type": "xsd:short"
+    }, 
+    "fulfillexpeditecriteria": {
+      "@id": "http://open.fda.gov/ns/faers#fulfillexpeditecriteria", 
+      "@type": "xsd:byte"
+    }, 
+    "occurcountry": {
+      "@id": "http://open.fda.gov/ns/faers#occurcountry", 
+      "@type": "xsd:string"
+    }, 
+    "patient": {
+      "drug": {
+        "openfda": {
+          "application_number": {
+            "@id": "http://open.fda.gov/ns/faers#application_number", 
+            "@type": "xsd:string"
+          }, 
+          "application_number_exact": {
+            "@id": "http://open.fda.gov/ns/faers#application_number_exact", 
+            "@type": "xsd:string"
+          }, 
+          "brand_name": {
+            "@id": "http://open.fda.gov/ns/faers#brand_name", 
+            "@type": "xsd:string"
+          }, 
+          "brand_name_exact": {
+            "@id": "http://open.fda.gov/ns/faers#brand_name_exact", 
+            "@type": "xsd:string"
+          }, 
+          "substance_name": {
+            "@id": "http://open.fda.gov/ns/faers#substance_name", 
+            "@type": "xsd:string"
+          }, 
+          "substance_name_exact": {
+            "@id": "http://open.fda.gov/ns/faers#substance_name_exact", 
+            "@type": "xsd:string"
+          }, 
+          "dosage_form": {
+            "@id": "http://open.fda.gov/ns/faers#dosage_form", 
+            "@type": "xsd:string"
+          }, 
+          "dosage_form_exact": {
+            "@id": "http://open.fda.gov/ns/faers#dosage_form_exact", 
+            "@type": "xsd:string"
+          }, 
+          "generic_name": {
+            "@id": "http://open.fda.gov/ns/faers#generic_name", 
+            "@type": "xsd:string"
+          }, 
+          "generic_name_exact": {
+            "@id": "http://open.fda.gov/ns/faers#generic_name_exact", 
+            "@type": "xsd:string"
+          }, 
+          "manufacturer_name": {
+            "@id": "http://open.fda.gov/ns/faers#manufacturer_name", 
+            "@type": "xsd:string"
+          }, 
+          "manufacturer_name_exact": {
+            "@id": "http://open.fda.gov/ns/faers#manufacturer_name_exact", 
+            "@type": "xsd:string"
+          }, 
+          "product_ndc": {
+            "@id": "http://open.fda.gov/ns/faers#product_ndc", 
+            "@type": "xsd:string"
+          }, 
+          "product_ndc_exact": {
+            "@id": "http://open.fda.gov/ns/faers#product_ndc_exact", 
+            "@type": "xsd:string"
+          }, 
+          "product_type": {
+            "@id": "http://open.fda.gov/ns/faers#product_type", 
+            "@type": "xsd:string"
+          }, 
+          "product_type_exact": {
+            "@id": "http://open.fda.gov/ns/faers#product_type_exact", 
+            "@type": "xsd:string"
+          }, 
+          "route": {
+            "@id": "http://open.fda.gov/ns/faers#route", 
+            "@type": "xsd:string"
+          }, 
+          "route_exact": {
+            "@id": "http://open.fda.gov/ns/faers#route_exact", 
+            "@type": "xsd:string"
+          }, 
+          "rxcui": {
+            "@id": "http://open.fda.gov/ns/faers#rxcui", 
+            "@type": "xsd:string"
+          }, 
+          "rxcui_exact": {
+            "@id": "http://open.fda.gov/ns/faers#rxcui_exact", 
+            "@type": "xsd:string"
+          }, 
+          "rxstring": {
+            "@id": "http://open.fda.gov/ns/faers#rxstring", 
+            "@type": "xsd:string"
+          }, 
+          "rxstring_exact": {
+            "@id": "http://open.fda.gov/ns/faers#rxstring_exact", 
+            "@type": "xsd:string"
+          }, 
+          "rxtty": {
+            "@id": "http://open.fda.gov/ns/faers#rxtty", 
+            "@type": "xsd:string"
+          }, 
+          "rxtty_exact": {
+            "@id": "http://open.fda.gov/ns/faers#rxtty_exact", 
+            "@type": "xsd:string"
+          }, 
+          "spl_id": {
+            "@id": "http://open.fda.gov/ns/faers#spl_id", 
+            "@type": "xsd:string"
+          }, 
+          "spl_id_exact": {
+            "@id": "http://open.fda.gov/ns/faers#spl_id_exact", 
+            "@type": "xsd:string"
+          }, 
+          "package_ndc": {
+            "@id": "http://open.fda.gov/ns/faers#package_ndc", 
+            "@type": "xsd:string"
+          }, 
+          "package_ndc_exact": {
+            "@id": "http://open.fda.gov/ns/faers#package_ndc_exact", 
+            "@type": "xsd:string"
+          }, 
+          "spl_set_id": {
+            "@id": "http://open.fda.gov/ns/faers#spl_set_id", 
+            "@type": "xsd:string"
+          }, 
+          "spl_set_id_exact": {
+            "@id": "http://open.fda.gov/ns/faers#spl_set_id_exact", 
+            "@type": "xsd:string"
+          }, 
+          "unii": {
+            "@id": "http://open.fda.gov/ns/faers#unii", 
+            "@type": "xsd:string"
+          }, 
+          "unii_exact": {
+            "@id": "http://open.fda.gov/ns/faers#unii_exact", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_moa": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_moa", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_moa_exact": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_moa_exact", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_pe": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_pe", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_pe_exact": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_pe_exact", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_cs": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_cs", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_cs_exact": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_cs_exact", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_epc": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_epc", 
+            "@type": "xsd:string"
+          }, 
+          "pharm_class_epc_exact": {
+            "@id": "http://open.fda.gov/ns/faers#pharm_class_epc_exact", 
+            "@type": "xsd:string"
+          }, 
+          "nui": {
+            "@id": "http://open.fda.gov/ns/faers#nui", 
+            "@type": "xsd:string"
+          }, 
+          "nui_exact": {
+            "@id": "http://open.fda.gov/ns/faers#nui_exact", 
+            "@type": "xsd:string"
+          }
+        }, 
+        "actiondrug": {
+          "@id": "http://open.fda.gov/ns/faers#actiondrug", 
+          "@type": "xsd:long"
+        }, 
+        "drugadditional": {
+          "@id": "http://open.fda.gov/ns/faers#drugadditional", 
+          "@type": "xsd:long"
+        }, 
+        "drugadministrationroute": {
+          "@id": "http://open.fda.gov/ns/faers#drugadministrationroute", 
+          "@type": "xsd:string"
+        }, 
+        "drugauthorizationnumb": {
+          "@id": "http://open.fda.gov/ns/faers#drugauthorizationnumb", 
+          "@type": "xsd:string"
+        }, 
+        "drugbatchnumb": {
+          "@id": "http://open.fda.gov/ns/faers#drugbatchnumb", 
+          "@type": "xsd:string"
+        }, 
+        "drugcharacterization": {
+          "@id": "http://open.fda.gov/ns/faers#drugcharacterization", 
+          "@type": "xsd:byte"
+        }, 
+        "drugcumulativedosagenumb": {
+          "@id": "http://open.fda.gov/ns/faers#drugcumulativedosagenumb", 
+          "@type": "xsd:float"
+        }, 
+        "drugcumulativedosageunit": {
+          "@id": "http://open.fda.gov/ns/faers#drugcumulativedosageunit", 
+          "@type": "xsd:string"
+        }, 
+        "drugdosageform": {
+          "@id": "http://open.fda.gov/ns/faers#drugdosageform", 
+          "@type": "xsd:string"
+        }, 
+        "drugdosagetext": {
+          "@id": "http://open.fda.gov/ns/faers#drugdosagetext", 
+          "@type": "xsd:string"
+        }, 
+        "drugenddate": {
+          "@id": "http://open.fda.gov/ns/faers#drugenddate", 
+          "@type": "xsd:date"
+        }, 
+        "drugenddateformat": {
+          "@id": "http://open.fda.gov/ns/faers#drugenddateformat", 
+          "@type": "xsd:string"
+        }, 
+        "drugindication": {
+          "@id": "http://open.fda.gov/ns/faers#drugindication", 
+          "@type": "xsd:string"
+        }, 
+        "drugintervaldosagedefinition": {
+          "@id": "http://open.fda.gov/ns/faers#drugintervaldosagedefinition", 
+          "@type": "xsd:short"
+        }, 
+        "drugintervaldosageunitnumb": {
+          "@id": "http://open.fda.gov/ns/faers#drugintervaldosageunitnumb", 
+          "@type": "xsd:short"
+        }, 
+        "drugrecurreadministration": {
+          "@id": "http://open.fda.gov/ns/faers#drugrecurreadministration", 
+          "@type": "xsd:byte"
+        }, 
+        "drugseparatedosagenumb": {
+          "@id": "http://open.fda.gov/ns/faers#drugseparatedosagenumb", 
+          "@type": "xsd:byte"
+        }, 
+        "drugstartdate": {
+          "@id": "http://open.fda.gov/ns/faers#drugstartdate", 
+          "@type": "xsd:date"
+        }, 
+        "drugstartdateformat": {
+          "@id": "http://open.fda.gov/ns/faers#drugstartdateformat", 
+          "@type": "xsd:string"
+        }, 
+        "drugstructuredosagenumb": {
+          "@id": "http://open.fda.gov/ns/faers#drugstructuredosagenumb", 
+          "@type": "xsd:float"
+        }, 
+        "drugstructuredosageunit": {
+          "@id": "http://open.fda.gov/ns/faers#drugstructuredosageunit", 
+          "@type": "xsd:string"
+        }, 
+        "drugtreatmentduration": {
+          "@id": "http://open.fda.gov/ns/faers#drugtreatmentduration", 
+          "@type": "xsd:float"
+        }, 
+        "drugtreatmentdurationunit": {
+          "@id": "http://open.fda.gov/ns/faers#drugtreatmentdurationunit", 
+          "@type": "xsd:string"
+        }, 
+        "medicinalproduct": {
+          "@id": "http://open.fda.gov/ns/faers#medicinalproduct", 
+          "@type": "xsd:string"
+        }
+      }, 
+      "patientdeath": {
+        "patientdeathdate": {
+          "@id": "http://open.fda.gov/ns/faers#patientdeathdate", 
+          "@type": "xsd:date"
+        }, 
+        "patientdeathdateformat": {
+          "@id": "http://open.fda.gov/ns/faers#patientdeathdateformat", 
+          "@type": "xsd:string"
+        }
+      }, 
+      "patientonsetage": {
+        "@id": "http://open.fda.gov/ns/faers#patientonsetage", 
+        "@type": "xsd:float"
+      }, 
+      "patientonsetageunit": {
+        "@id": "http://open.fda.gov/ns/faers#patientonsetageunit", 
+        "@type": "xsd:string"
+      }, 
+      "patientsex": {
+        "@id": "http://open.fda.gov/ns/faers#patientsex", 
+        "@type": "xsd:byte"
+      }, 
+      "patientweight": {
+        "@id": "http://open.fda.gov/ns/faers#patientweight", 
+        "@type": "xsd:float"
+      }, 
+      "reaction": {
+        "reactionmeddrapt": {
+          "@id": "http://open.fda.gov/ns/faers#reactionmeddrapt", 
+          "@type": "xsd:string"
+        }, 
+        "reactionmeddraversionpt": {
+          "@id": "http://open.fda.gov/ns/faers#reactionmeddraversionpt", 
+          "@type": "xsd:string"
+        }, 
+        "reactionoutcome": {
+          "@id": "http://open.fda.gov/ns/faers#reactionoutcome", 
+          "@type": "xsd:byte"
+        }
+      }
+    }, 
+    "primarysource": {
+      "qualification": {
+        "@id": "http://open.fda.gov/ns/faers#qualification", 
+        "@type": "xsd:byte"
+      }, 
+      "reportercountry": {
+        "@id": "http://open.fda.gov/ns/faers#reportercountry", 
+        "@type": "xsd:string"
+      }
+    }, 
+    "primarysourcecountry": {
+      "@id": "http://open.fda.gov/ns/faers#primarysourcecountry", 
+      "@type": "xsd:string"
+    }, 
+    "receiptdate": {
+      "@id": "http://open.fda.gov/ns/faers#receiptdate", 
+      "@type": "xsd:date"
+    }, 
+    "receiptdateformat": {
+      "@id": "http://open.fda.gov/ns/faers#receiptdateformat", 
+      "@type": "xsd:string"
+    }, 
+    "receivedate": {
+      "@id": "http://open.fda.gov/ns/faers#receivedate", 
+      "@type": "xsd:date"
+    }, 
+    "receivedateformat": {
+      "@id": "http://open.fda.gov/ns/faers#receivedateformat", 
+      "@type": "xsd:string"
+    }, 
+    "receiver": {
+      "receiverorganization": {
+        "@id": "http://open.fda.gov/ns/faers#receiverorganization", 
+        "@type": "xsd:string"
+      }, 
+      "receivertype": {
+        "@id": "http://open.fda.gov/ns/faers#receivertype", 
+        "@type": "xsd:short"
+      }
+    }, 
+    "reportduplicate": {
+      "duplicatenumb": {
+        "@id": "http://open.fda.gov/ns/faers#duplicatenumb", 
+        "@type": "xsd:string"
+      }, 
+      "duplicatesource": {
+        "@id": "http://open.fda.gov/ns/faers#duplicatesource", 
+        "@type": "xsd:string"
+      }
+    }, 
+    "reporttype": {
+      "@id": "http://open.fda.gov/ns/faers#reporttype", 
+      "@type": "xsd:byte"
+    }, 
+    "safetyreportid": {
+      "@id": "http://open.fda.gov/ns/faers#safetyreportid", 
+      "@type": "xsd:string"
+    }, 
+    "safetyreportversion": {
+      "@id": "http://open.fda.gov/ns/faers#safetyreportversion", 
+      "@type": "xsd:byte"
+    }, 
+    "sender": {
+      "senderorganization": {
+        "@id": "http://open.fda.gov/ns/faers#senderorganization", 
+        "@type": "xsd:string"
+      }, 
+      "sendertype": {
+        "@id": "http://open.fda.gov/ns/faers#sendertype", 
+        "@type": "xsd:byte"
+      }
+    }, 
+    "serious": {
+      "@id": "http://open.fda.gov/ns/faers#serious", 
+      "@type": "xsd:byte"
+    }, 
+    "seriousnesscongenitalanomali": {
+      "@id": "http://open.fda.gov/ns/faers#seriousnesscongenitalanomali", 
+      "@type": "xsd:byte"
+    }, 
+    "seriousnessdeath": {
+      "@id": "http://open.fda.gov/ns/faers#seriousnessdeath", 
+      "@type": "xsd:byte"
+    }, 
+    "seriousnessdisabling": {
+      "@id": "http://open.fda.gov/ns/faers#seriousnessdisabling", 
+      "@type": "xsd:byte"
+    }, 
+    "seriousnesshospitalization": {
+      "@id": "http://open.fda.gov/ns/faers#seriousnesshospitalization", 
+      "@type": "xsd:byte"
+    }, 
+    "seriousnesslifethreatening": {
+      "@id": "http://open.fda.gov/ns/faers#seriousnesslifethreatening", 
+      "@type": "xsd:byte"
+    }, 
+    "seriousnessother": {
+      "@id": "http://open.fda.gov/ns/faers#seriousnessother", 
+      "@type": "xsd:byte"
+    }, 
+    "transmissiondate": {
+      "@id": "http://open.fda.gov/ns/faers#transmissiondate", 
+      "@type": "xsd:date"
+    }, 
+    "transmissiondateformat": {
+      "@id": "http://open.fda.gov/ns/faers#transmissiondateformat", 
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "adverse_event_flag": {
+      "@id": "http://open.fda.gov/ns/maude#adverse_event_flag", 
+      "@type": "xsd:string"
+    }, 
+    "date_facility_aware": {
+      "@id": "http://open.fda.gov/ns/maude#date_facility_aware", 
+      "@type": "xsd:date"
+    }, 
+    "date_manufacturer_received": {
+      "@id": "http://open.fda.gov/ns/maude#date_manufacturer_received", 
+      "@type": "xsd:date"
+    }, 
+    "date_of_event": {
+      "@id": "http://open.fda.gov/ns/maude#date_of_event", 
+      "@type": "xsd:date"
+    }, 
+    "date_received": {
+      "@id": "http://open.fda.gov/ns/maude#date_received", 
+      "@type": "xsd:date"
+    }, 
+    "date_report": {
+      "@id": "http://open.fda.gov/ns/maude#date_report", 
+      "@type": "xsd:date"
+    }, 
+    "date_report_to_fda": {
+      "@id": "http://open.fda.gov/ns/maude#date_report_to_fda", 
+      "@type": "xsd:date"
+    }, 
+    "date_report_to_manufacturer": {
+      "@id": "http://open.fda.gov/ns/maude#date_report_to_manufacturer", 
+      "@type": "xsd:date"
+    }, 
+    "device": {
+      "baseline_510_k_exempt_flag": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_510_k_exempt_flag", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_510_k_flag": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_510_k_flag", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_510_k_number": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_510_k_number", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_brand_name": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_brand_name", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_catalog_number": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_catalog_number", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_date_ceased_marketing": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_date_ceased_marketing", 
+        "@type": "xsd:date"
+      }, 
+      "baseline_date_first_marketed": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_date_first_marketed", 
+        "@type": "xsd:date"
+      }, 
+      "baseline_device_family": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_device_family", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_generic_name": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_generic_name", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_model_number": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_model_number", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_other_id_number": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_other_id_number", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_pma_flag": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_pma_flag", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_pma_number": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_pma_number", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_preamendment_flag": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_preamendment_flag", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_shelf_life_contained": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_shelf_life_contained", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_shelf_life_in_months": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_shelf_life_in_months", 
+        "@type": "xsd:string"
+      }, 
+      "baseline_transitional_flag": {
+        "@id": "http://open.fda.gov/ns/maude#baseline_transitional_flag", 
+        "@type": "xsd:string"
+      }, 
+      "brand_name": {
+        "@id": "http://open.fda.gov/ns/maude#brand_name", 
+        "@type": "xsd:string"
+      }, 
+      "catalog_number": {
+        "@id": "http://open.fda.gov/ns/maude#catalog_number", 
+        "@type": "xsd:string"
+      }, 
+      "date_received": {
+        "@id": "http://open.fda.gov/ns/maude#date_received", 
+        "@type": "xsd:date"
+      }, 
+      "date_removed_flag": {
+        "@id": "http://open.fda.gov/ns/maude#date_removed_flag", 
+        "@type": "xsd:string"
+      }, 
+      "date_returned_to_manufacturer": {
+        "@id": "http://open.fda.gov/ns/maude#date_returned_to_manufacturer", 
+        "@type": "xsd:date"
+      }, 
+      "device_age_text": {
+        "@id": "http://open.fda.gov/ns/maude#device_age_text", 
+        "@type": "xsd:string"
+      }, 
+      "device_availability": {
+        "@id": "http://open.fda.gov/ns/maude#device_availability", 
+        "@type": "xsd:string"
+      }, 
+      "device_evaluated_by_manufacturer": {
+        "@id": "http://open.fda.gov/ns/maude#device_evaluated_by_manufacturer", 
+        "@type": "xsd:string"
+      }, 
+      "device_event_key": {
+        "@id": "http://open.fda.gov/ns/maude#device_event_key", 
+        "@type": "xsd:string"
+      }, 
+      "device_operator": {
+        "@id": "http://open.fda.gov/ns/maude#device_operator", 
+        "@type": "xsd:string"
+      }, 
+      "device_report_product_code": {
+        "@id": "http://open.fda.gov/ns/maude#device_report_product_code", 
+        "@type": "xsd:string"
+      }, 
+      "device_sequence_number": {
+        "@id": "http://open.fda.gov/ns/maude#device_sequence_number", 
+        "@type": "xsd:string"
+      }, 
+      "expiration_date_of_device": {
+        "@id": "http://open.fda.gov/ns/maude#expiration_date_of_device", 
+        "@type": "xsd:date"
+      }, 
+      "generic_name": {
+        "@id": "http://open.fda.gov/ns/maude#generic_name", 
+        "@type": "xsd:string"
+      }, 
+      "implant_flag": {
+        "@id": "http://open.fda.gov/ns/maude#implant_flag", 
+        "@type": "xsd:string"
+      }, 
+      "lot_number": {
+        "@id": "http://open.fda.gov/ns/maude#lot_number", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_address_1": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_address_1", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_address_2": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_address_2", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_city": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_city", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_country": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_country", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_name": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_name", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_postal_code": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_postal_code", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_state": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_state", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_zip_code": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_zip_code", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_d_zip_code_ext": {
+        "@id": "http://open.fda.gov/ns/maude#manufacturer_d_zip_code_ext", 
+        "@type": "xsd:string"
+      }, 
+      "model_number": {
+        "@id": "http://open.fda.gov/ns/maude#model_number", 
+        "@type": "xsd:string"
+      }, 
+      "other_id_number": {
+        "@id": "http://open.fda.gov/ns/maude#other_id_number", 
+        "@type": "xsd:string"
+      }
+    }, 
+    "device_date_of_manufacturere": {
+      "@id": "http://open.fda.gov/ns/maude#device_date_of_manufacturere", 
+      "@type": "xsd:date"
+    }, 
+    "distributor_address_1": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_address_1", 
+      "@type": "xsd:string"
+    }, 
+    "distributor_address_2": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_address_2", 
+      "@type": "xsd:string"
+    }, 
+    "distributor_city": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_city", 
+      "@type": "xsd:string"
+    }, 
+    "distributor_name": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_name", 
+      "@type": "xsd:string"
+    }, 
+    "distributor_state": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_state", 
+      "@type": "xsd:string"
+    }, 
+    "distributor_zip_code": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_zip_code", 
+      "@type": "xsd:string"
+    }, 
+    "distributor_zip_code_ext": {
+      "@id": "http://open.fda.gov/ns/maude#distributor_zip_code_ext", 
+      "@type": "xsd:string"
+    }, 
+    "event_key": {
+      "@id": "http://open.fda.gov/ns/maude#event_key", 
+      "@type": "xsd:string"
+    }, 
+    "event_location": {
+      "@id": "http://open.fda.gov/ns/maude#event_location", 
+      "@type": "xsd:string"
+    }, 
+    "event_type": {
+      "@id": "http://open.fda.gov/ns/maude#event_type", 
+      "@type": "xsd:string"
+    }, 
+    "health_professional": {
+      "@id": "http://open.fda.gov/ns/maude#health_professional", 
+      "@type": "xsd:string"
+    }, 
+    "initial_report_to_fda": {
+      "@id": "http://open.fda.gov/ns/maude#initial_report_to_fda", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_address_1": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_address_1", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_address_2": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_address_2", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_city": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_city", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_address_1": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_address_1", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_address_2": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_address_2", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_area_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_area_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_city": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_city", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_country": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_country", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_exchange": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_exchange", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_extension": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_extension", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_f_name": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_f_name", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_l_name": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_l_name", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_pcity": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_pcity", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_pcountry": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_pcountry", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_phone_number": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_phone_number", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_plocal": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_plocal", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_postal_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_postal_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_state": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_state", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_t_name": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_t_name", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_zip_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_zip_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_contact_zip_ext": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_contact_zip_ext", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_country": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_country", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_city": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_city", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_country": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_country", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_name": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_name", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_postal_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_postal_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_state": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_state", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_street_1": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_street_1", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_street_2": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_street_2", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_zip_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_zip_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_g1_zip_code_ext": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_g1_zip_code_ext", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_link_flag": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_link_flag", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_name": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_name", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_postal_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_postal_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_state": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_state", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_zip_code": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_zip_code", 
+      "@type": "xsd:string"
+    }, 
+    "manufacturer_zip_code_ext": {
+      "@id": "http://open.fda.gov/ns/maude#manufacturer_zip_code_ext", 
+      "@type": "xsd:string"
+    }, 
+    "mdr_report_key": {
+      "@id": "http://open.fda.gov/ns/maude#mdr_report_key", 
+      "@type": "xsd:string"
+    }, 
+    "mdr_text": {
+      "date_report": {
+        "@id": "http://open.fda.gov/ns/maude#date_report", 
+        "@type": "xsd:date"
+      }, 
+      "mdr_text_key": {
+        "@id": "http://open.fda.gov/ns/maude#mdr_text_key", 
+        "@type": "xsd:string"
+      }, 
+      "patient_sequence_number": {
+        "@id": "http://open.fda.gov/ns/maude#patient_sequence_number", 
+        "@type": "xsd:string"
+      }, 
+      "text": {
+        "@id": "http://open.fda.gov/ns/maude#text", 
+        "@type": "xsd:string"
+      }, 
+      "text_type_code": {
+        "@id": "http://open.fda.gov/ns/maude#text_type_code", 
+        "@type": "xsd:string"
+      }
+    }, 
+    "number_devices_in_event": {
+      "@id": "http://open.fda.gov/ns/maude#number_devices_in_event", 
+      "@type": "xsd:string"
+    }, 
+    "number_patients_in_event": {
+      "@id": "http://open.fda.gov/ns/maude#number_patients_in_event", 
+      "@type": "xsd:string"
+    }, 
+    "patient": {
+      "date_received": {
+        "@id": "http://open.fda.gov/ns/maude#date_received", 
+        "@type": "xsd:date"
+      }, 
+      "patient_sequence_number": {
+        "@id": "http://open.fda.gov/ns/maude#patient_sequence_number", 
+        "@type": "xsd:string"
+      }, 
+      "sequence_number_outcome": {
+        "@id": "http://open.fda.gov/ns/maude#sequence_number_outcome", 
+        "@type": "xsd:string"
+      }, 
+      "sequence_number_outcome_exact": {
+        "@id": "http://open.fda.gov/ns/maude#sequence_number_outcome_exact", 
+        "@type": "xsd:string"
+      }, 
+      "sequence_number_treatment": {
+        "@id": "http://open.fda.gov/ns/maude#sequence_number_treatment", 
+        "@type": "xsd:string"
+      }, 
+      "sequence_number_treatment_exact": {
+        "@id": "http://open.fda.gov/ns/maude#sequence_number_treatment_exact", 
+        "@type": "xsd:string"
+      }
+    }, 
+    "previous_use_code": {
+      "@id": "http://open.fda.gov/ns/maude#previous_use_code", 
+      "@type": "xsd:string"
+    }, 
+    "product_problem_flag": {
+      "@id": "http://open.fda.gov/ns/maude#product_problem_flag", 
+      "@type": "xsd:string"
+    }, 
+    "remedial_action": {
+      "@id": "http://open.fda.gov/ns/maude#remedial_action", 
+      "@type": "xsd:string"
+    }, 
+    "remedial_action_exact": {
+      "@id": "http://open.fda.gov/ns/maude#remedial_action_exact", 
+      "@type": "xsd:string"
+    }, 
+    "removal_correction_number": {
+      "@id": "http://open.fda.gov/ns/maude#removal_correction_number", 
+      "@type": "xsd:string"
+    }, 
+    "report_date": {
+      "@id": "http://open.fda.gov/ns/maude#report_date", 
+      "@type": "xsd:date"
+    }, 
+    "report_number": {
+      "@id": "http://open.fda.gov/ns/maude#report_number", 
+      "@type": "xsd:string"
+    }, 
+    "report_source_code": {
+      "@id": "http://open.fda.gov/ns/maude#report_source_code", 
+      "@type": "xsd:string"
+    }, 
+    "report_to_fda": {
+      "@id": "http://open.fda.gov/ns/maude#report_to_fda", 
+      "@type": "xsd:string"
+    }, 
+    "report_to_manufacturer": {
+      "@id": "http://open.fda.gov/ns/maude#report_to_manufacturer", 
+      "@type": "xsd:string"
+    }, 
+    "reporter_occupation_code": {
+      "@id": "http://open.fda.gov/ns/maude#reporter_occupation_code", 
+      "@type": "xsd:string"
+    }, 
+    "reprocessed_and_reused_flag": {
+      "@id": "http://open.fda.gov/ns/maude#reprocessed_and_reused_flag", 
+      "@type": "xsd:string"
+    }, 
+    "single_use_flag": {
+      "@id": "http://open.fda.gov/ns/maude#single_use_flag", 
+      "@type": "xsd:string"
+    }, 
+    "source_type": {
+      "@id": "http://open.fda.gov/ns/maude#source_type", 
+      "@type": "xsd:string"
+    }, 
+    "source_type_exact": {
+      "@id": "http://open.fda.gov/ns/maude#source_type_exact", 
+      "@type": "xsd:string"
+    }, 
+    "type_of_report": {
+      "@id": "http://open.fda.gov/ns/maude#type_of_report", 
+      "@type": "xsd:string"
+    }, 
+    "type_of_report_exact": {
+      "@id": "http://open.fda.gov/ns/maude#type_of_report_exact", 
+      "@type": "xsd:string"
+    }
+  }
+}

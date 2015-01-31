@@ -1,0 +1,263 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "@timestamp": {
+      "@id": "http://open.fda.gov/ns/res#@timestamp", 
+      "@type": "xsd:date"
+    }, 
+    "product_type": {
+      "@id": "http://open.fda.gov/ns/res#product_type", 
+      "@type": "xsd:string"
+    }, 
+    "event_id": {
+      "@id": "http://open.fda.gov/ns/res#event_id", 
+      "@type": "xsd:long"
+    }, 
+    "status": {
+      "@id": "http://open.fda.gov/ns/res#status", 
+      "@type": "xsd:string"
+    }, 
+    "recalling_firm": {
+      "@id": "http://open.fda.gov/ns/res#recalling_firm", 
+      "@type": "xsd:string"
+    }, 
+    "city": {
+      "@id": "http://open.fda.gov/ns/res#city", 
+      "@type": "xsd:string"
+    }, 
+    "state": {
+      "@id": "http://open.fda.gov/ns/res#state", 
+      "@type": "xsd:string"
+    }, 
+    "country": {
+      "@id": "http://open.fda.gov/ns/res#country", 
+      "@type": "xsd:string"
+    }, 
+    "voluntary_mandated": {
+      "@id": "http://open.fda.gov/ns/res#voluntary_mandated", 
+      "@type": "xsd:string"
+    }, 
+    "initial_firm_notification": {
+      "@id": "http://open.fda.gov/ns/res#initial_firm_notification", 
+      "@type": "xsd:string"
+    }, 
+    "distribution_pattern": {
+      "@id": "http://open.fda.gov/ns/res#distribution_pattern", 
+      "@type": "xsd:string"
+    }, 
+    "classification": {
+      "@id": "http://open.fda.gov/ns/res#classification", 
+      "@type": "xsd:string"
+    }, 
+    "product_description": {
+      "@id": "http://open.fda.gov/ns/res#product_description", 
+      "@type": "xsd:string"
+    }, 
+    "code_info": {
+      "@id": "http://open.fda.gov/ns/res#code_info", 
+      "@type": "xsd:string"
+    }, 
+    "product_quantity": {
+      "@id": "http://open.fda.gov/ns/res#product_quantity", 
+      "@type": "xsd:string"
+    }, 
+    "reason_for_recall": {
+      "@id": "http://open.fda.gov/ns/res#reason_for_recall", 
+      "@type": "xsd:string"
+    }, 
+    "recall_initiation_date": {
+      "@id": "http://open.fda.gov/ns/res#recall_initiation_date", 
+      "@type": "xsd:date"
+    }, 
+    "report_date": {
+      "@id": "http://open.fda.gov/ns/res#report_date", 
+      "@type": "xsd:date"
+    }, 
+    "openfda": {
+      "application_number": {
+        "@id": "http://open.fda.gov/ns/res#application_number", 
+        "@type": "xsd:string"
+      }, 
+      "application_number_exact": {
+        "@id": "http://open.fda.gov/ns/res#application_number_exact", 
+        "@type": "xsd:string"
+      }, 
+      "brand_name": {
+        "@id": "http://open.fda.gov/ns/res#brand_name", 
+        "@type": "xsd:string"
+      }, 
+      "brand_name_exact": {
+        "@id": "http://open.fda.gov/ns/res#brand_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "substance_name": {
+        "@id": "http://open.fda.gov/ns/res#substance_name", 
+        "@type": "xsd:string"
+      }, 
+      "substance_name_exact": {
+        "@id": "http://open.fda.gov/ns/res#substance_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "dosage_form": {
+        "@id": "http://open.fda.gov/ns/res#dosage_form", 
+        "@type": "xsd:string"
+      }, 
+      "dosage_form_exact": {
+        "@id": "http://open.fda.gov/ns/res#dosage_form_exact", 
+        "@type": "xsd:string"
+      }, 
+      "generic_name": {
+        "@id": "http://open.fda.gov/ns/res#generic_name", 
+        "@type": "xsd:string"
+      }, 
+      "generic_name_exact": {
+        "@id": "http://open.fda.gov/ns/res#generic_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_name": {
+        "@id": "http://open.fda.gov/ns/res#manufacturer_name", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_name_exact": {
+        "@id": "http://open.fda.gov/ns/res#manufacturer_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "product_ndc": {
+        "@id": "http://open.fda.gov/ns/res#product_ndc", 
+        "@type": "xsd:string"
+      }, 
+      "product_ndc_exact": {
+        "@id": "http://open.fda.gov/ns/res#product_ndc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "product_type": {
+        "@id": "http://open.fda.gov/ns/res#product_type", 
+        "@type": "xsd:string"
+      }, 
+      "product_type_exact": {
+        "@id": "http://open.fda.gov/ns/res#product_type_exact", 
+        "@type": "xsd:string"
+      }, 
+      "route": {
+        "@id": "http://open.fda.gov/ns/res#route", 
+        "@type": "xsd:string"
+      }, 
+      "route_exact": {
+        "@id": "http://open.fda.gov/ns/res#route_exact", 
+        "@type": "xsd:string"
+      }, 
+      "rxcui": {
+        "@id": "http://open.fda.gov/ns/res#rxcui", 
+        "@type": "xsd:string"
+      }, 
+      "rxcui_exact": {
+        "@id": "http://open.fda.gov/ns/res#rxcui_exact", 
+        "@type": "xsd:string"
+      }, 
+      "rxstring": {
+        "@id": "http://open.fda.gov/ns/res#rxstring", 
+        "@type": "xsd:string"
+      }, 
+      "rxstring_exact": {
+        "@id": "http://open.fda.gov/ns/res#rxstring_exact", 
+        "@type": "xsd:string"
+      }, 
+      "rxtty": {
+        "@id": "http://open.fda.gov/ns/res#rxtty", 
+        "@type": "xsd:string"
+      }, 
+      "rxtty_exact": {
+        "@id": "http://open.fda.gov/ns/res#rxtty_exact", 
+        "@type": "xsd:string"
+      }, 
+      "spl_id": {
+        "@id": "http://open.fda.gov/ns/res#spl_id", 
+        "@type": "xsd:string"
+      }, 
+      "spl_id_exact": {
+        "@id": "http://open.fda.gov/ns/res#spl_id_exact", 
+        "@type": "xsd:string"
+      }, 
+      "package_ndc": {
+        "@id": "http://open.fda.gov/ns/res#package_ndc", 
+        "@type": "xsd:string"
+      }, 
+      "package_ndc_exact": {
+        "@id": "http://open.fda.gov/ns/res#package_ndc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "spl_set_id": {
+        "@id": "http://open.fda.gov/ns/res#spl_set_id", 
+        "@type": "xsd:string"
+      }, 
+      "spl_set_id_exact": {
+        "@id": "http://open.fda.gov/ns/res#spl_set_id_exact", 
+        "@type": "xsd:string"
+      }, 
+      "unii": {
+        "@id": "http://open.fda.gov/ns/res#unii", 
+        "@type": "xsd:string"
+      }, 
+      "unii_exact": {
+        "@id": "http://open.fda.gov/ns/res#unii_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_moa": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_moa", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_moa_exact": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_moa_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_pe": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_pe", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_pe_exact": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_pe_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_cs": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_cs", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_cs_exact": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_cs_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_epc": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_epc", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_epc_exact": {
+        "@id": "http://open.fda.gov/ns/res#pharm_class_epc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "nui": {
+        "@id": "http://open.fda.gov/ns/res#nui", 
+        "@type": "xsd:string"
+      }, 
+      "nui_exact": {
+        "@id": "http://open.fda.gov/ns/res#nui_exact", 
+        "@type": "xsd:string"
+      }, 
+      "upc": {
+        "@id": "http://open.fda.gov/ns/res#upc", 
+        "@type": "xsd:string"
+      }, 
+      "upc_exact": {
+        "@id": "http://open.fda.gov/ns/res#upc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "is_original_packager": {
+        "@id": "http://open.fda.gov/ns/res#is_original_packager", 
+        "@type": "xsd:boolean"
+      }, 
+      "is_original_packager_exact": {
+        "@id": "http://open.fda.gov/ns/res#is_original_packager_exact", 
+        "@type": "xsd:boolean"
+      }
+    }
+  }
+}

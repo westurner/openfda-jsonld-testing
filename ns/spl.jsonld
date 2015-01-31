@@ -1,0 +1,907 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "set_id": {
+      "@id": "http://open.fda.gov/ns/spl#set_id", 
+      "@type": "xsd:string"
+    }, 
+    "id": {
+      "@id": "http://open.fda.gov/ns/spl#id", 
+      "@type": "xsd:string"
+    }, 
+    "version": {
+      "@id": "http://open.fda.gov/ns/spl#version", 
+      "@type": "xsd:string"
+    }, 
+    "effective_time": {
+      "@id": "http://open.fda.gov/ns/spl#effective_time", 
+      "@type": "xsd:date"
+    }, 
+    "abuse": {
+      "@id": "http://open.fda.gov/ns/spl#abuse", 
+      "@type": "xsd:string"
+    }, 
+    "abuse_table": {
+      "@id": "http://open.fda.gov/ns/spl#abuse_table", 
+      "@type": "xsd:string"
+    }, 
+    "accessories": {
+      "@id": "http://open.fda.gov/ns/spl#accessories", 
+      "@type": "xsd:string"
+    }, 
+    "accessories_table": {
+      "@id": "http://open.fda.gov/ns/spl#accessories_table", 
+      "@type": "xsd:string"
+    }, 
+    "adverse_reactions": {
+      "@id": "http://open.fda.gov/ns/spl#adverse_reactions", 
+      "@type": "xsd:string"
+    }, 
+    "adverse_reactions_table": {
+      "@id": "http://open.fda.gov/ns/spl#adverse_reactions_table", 
+      "@type": "xsd:string"
+    }, 
+    "alarms": {
+      "@id": "http://open.fda.gov/ns/spl#alarms", 
+      "@type": "xsd:string"
+    }, 
+    "alarms_table": {
+      "@id": "http://open.fda.gov/ns/spl#alarms_table", 
+      "@type": "xsd:string"
+    }, 
+    "animal_pharmacology_and_or_toxicology": {
+      "@id": "http://open.fda.gov/ns/spl#animal_pharmacology_and_or_toxicology", 
+      "@type": "xsd:string"
+    }, 
+    "animal_pharmacology_and_or_toxicology_table": {
+      "@id": "http://open.fda.gov/ns/spl#animal_pharmacology_and_or_toxicology_table", 
+      "@type": "xsd:string"
+    }, 
+    "assembly_or_installation_instructions": {
+      "@id": "http://open.fda.gov/ns/spl#assembly_or_installation_instructions", 
+      "@type": "xsd:string"
+    }, 
+    "assembly_or_installation_instructions_table": {
+      "@id": "http://open.fda.gov/ns/spl#assembly_or_installation_instructions_table", 
+      "@type": "xsd:string"
+    }, 
+    "boxed_warning": {
+      "@id": "http://open.fda.gov/ns/spl#boxed_warning", 
+      "@type": "xsd:string"
+    }, 
+    "boxed_warning_table": {
+      "@id": "http://open.fda.gov/ns/spl#boxed_warning_table", 
+      "@type": "xsd:string"
+    }, 
+    "calibration_instructions": {
+      "@id": "http://open.fda.gov/ns/spl#calibration_instructions", 
+      "@type": "xsd:string"
+    }, 
+    "calibration_instructions_table": {
+      "@id": "http://open.fda.gov/ns/spl#calibration_instructions_table", 
+      "@type": "xsd:string"
+    }, 
+    "carcinogenesis_and_mutagenesis_and_impairment_of_fertility": {
+      "@id": "http://open.fda.gov/ns/spl#carcinogenesis_and_mutagenesis_and_impairment_of_fertility", 
+      "@type": "xsd:string"
+    }, 
+    "carcinogenesis_and_mutagenesis_and_impairment_of_fertility_table": {
+      "@id": "http://open.fda.gov/ns/spl#carcinogenesis_and_mutagenesis_and_impairment_of_fertility_table", 
+      "@type": "xsd:string"
+    }, 
+    "clinical_pharmacology": {
+      "@id": "http://open.fda.gov/ns/spl#clinical_pharmacology", 
+      "@type": "xsd:string"
+    }, 
+    "clinical_pharmacology_table": {
+      "@id": "http://open.fda.gov/ns/spl#clinical_pharmacology_table", 
+      "@type": "xsd:string"
+    }, 
+    "cleaning": {
+      "@id": "http://open.fda.gov/ns/spl#cleaning", 
+      "@type": "xsd:string"
+    }, 
+    "cleaning_table": {
+      "@id": "http://open.fda.gov/ns/spl#cleaning_table", 
+      "@type": "xsd:string"
+    }, 
+    "clinical_studies": {
+      "@id": "http://open.fda.gov/ns/spl#clinical_studies", 
+      "@type": "xsd:string"
+    }, 
+    "clinical_studies_table": {
+      "@id": "http://open.fda.gov/ns/spl#clinical_studies_table", 
+      "@type": "xsd:string"
+    }, 
+    "compatible_accessories": {
+      "@id": "http://open.fda.gov/ns/spl#compatible_accessories", 
+      "@type": "xsd:string"
+    }, 
+    "compatible_accessories_table": {
+      "@id": "http://open.fda.gov/ns/spl#compatible_accessories_table", 
+      "@type": "xsd:string"
+    }, 
+    "components": {
+      "@id": "http://open.fda.gov/ns/spl#components", 
+      "@type": "xsd:string"
+    }, 
+    "components_table": {
+      "@id": "http://open.fda.gov/ns/spl#components_table", 
+      "@type": "xsd:string"
+    }, 
+    "contraindications": {
+      "@id": "http://open.fda.gov/ns/spl#contraindications", 
+      "@type": "xsd:string"
+    }, 
+    "contraindications_table": {
+      "@id": "http://open.fda.gov/ns/spl#contraindications_table", 
+      "@type": "xsd:string"
+    }, 
+    "controlled_substance": {
+      "@id": "http://open.fda.gov/ns/spl#controlled_substance", 
+      "@type": "xsd:string"
+    }, 
+    "controlled_substance_table": {
+      "@id": "http://open.fda.gov/ns/spl#controlled_substance_table", 
+      "@type": "xsd:string"
+    }, 
+    "dependence": {
+      "@id": "http://open.fda.gov/ns/spl#dependence", 
+      "@type": "xsd:string"
+    }, 
+    "dependence_table": {
+      "@id": "http://open.fda.gov/ns/spl#dependence_table", 
+      "@type": "xsd:string"
+    }, 
+    "description": {
+      "@id": "http://open.fda.gov/ns/spl#description", 
+      "@type": "xsd:string"
+    }, 
+    "description_table": {
+      "@id": "http://open.fda.gov/ns/spl#description_table", 
+      "@type": "xsd:string"
+    }, 
+    "diagram_of_device": {
+      "@id": "http://open.fda.gov/ns/spl#diagram_of_device", 
+      "@type": "xsd:string"
+    }, 
+    "diagram_of_device_table": {
+      "@id": "http://open.fda.gov/ns/spl#diagram_of_device_table", 
+      "@type": "xsd:string"
+    }, 
+    "disposal_and_waste_handling": {
+      "@id": "http://open.fda.gov/ns/spl#disposal_and_waste_handling", 
+      "@type": "xsd:string"
+    }, 
+    "disposal_and_waste_handling_table": {
+      "@id": "http://open.fda.gov/ns/spl#disposal_and_waste_handling_table", 
+      "@type": "xsd:string"
+    }, 
+    "dosage_and_administration": {
+      "@id": "http://open.fda.gov/ns/spl#dosage_and_administration", 
+      "@type": "xsd:string"
+    }, 
+    "dosage_and_administration_table": {
+      "@id": "http://open.fda.gov/ns/spl#dosage_and_administration_table", 
+      "@type": "xsd:string"
+    }, 
+    "dosage_forms_and_strengths": {
+      "@id": "http://open.fda.gov/ns/spl#dosage_forms_and_strengths", 
+      "@type": "xsd:string"
+    }, 
+    "dosage_forms_and_strengths_table": {
+      "@id": "http://open.fda.gov/ns/spl#dosage_forms_and_strengths_table", 
+      "@type": "xsd:string"
+    }, 
+    "drug_and_or_laboratory_test_interactions": {
+      "@id": "http://open.fda.gov/ns/spl#drug_and_or_laboratory_test_interactions", 
+      "@type": "xsd:string"
+    }, 
+    "drug_and_or_laboratory_test_interactions_table": {
+      "@id": "http://open.fda.gov/ns/spl#drug_and_or_laboratory_test_interactions_table", 
+      "@type": "xsd:string"
+    }, 
+    "drug_abuse_and_dependence": {
+      "@id": "http://open.fda.gov/ns/spl#drug_abuse_and_dependence", 
+      "@type": "xsd:string"
+    }, 
+    "drug_abuse_and_dependence_table": {
+      "@id": "http://open.fda.gov/ns/spl#drug_abuse_and_dependence_table", 
+      "@type": "xsd:string"
+    }, 
+    "drug_interactions": {
+      "@id": "http://open.fda.gov/ns/spl#drug_interactions", 
+      "@type": "xsd:string"
+    }, 
+    "drug_interactions_table": {
+      "@id": "http://open.fda.gov/ns/spl#drug_interactions_table", 
+      "@type": "xsd:string"
+    }, 
+    "environmental_warning": {
+      "@id": "http://open.fda.gov/ns/spl#environmental_warning", 
+      "@type": "xsd:string"
+    }, 
+    "environmental_warning_table": {
+      "@id": "http://open.fda.gov/ns/spl#environmental_warning_table", 
+      "@type": "xsd:string"
+    }, 
+    "food_safety_warning": {
+      "@id": "http://open.fda.gov/ns/spl#food_safety_warning", 
+      "@type": "xsd:string"
+    }, 
+    "food_safety_warning_table": {
+      "@id": "http://open.fda.gov/ns/spl#food_safety_warning_table", 
+      "@type": "xsd:string"
+    }, 
+    "general_precautions": {
+      "@id": "http://open.fda.gov/ns/spl#general_precautions", 
+      "@type": "xsd:string"
+    }, 
+    "general_precautions_table": {
+      "@id": "http://open.fda.gov/ns/spl#general_precautions_table", 
+      "@type": "xsd:string"
+    }, 
+    "geriatric_use": {
+      "@id": "http://open.fda.gov/ns/spl#geriatric_use", 
+      "@type": "xsd:string"
+    }, 
+    "geriatric_use_table": {
+      "@id": "http://open.fda.gov/ns/spl#geriatric_use_table", 
+      "@type": "xsd:string"
+    }, 
+    "guaranteed_analysis_of_feed": {
+      "@id": "http://open.fda.gov/ns/spl#guaranteed_analysis_of_feed", 
+      "@type": "xsd:string"
+    }, 
+    "guaranteed_analysis_of_feed_table": {
+      "@id": "http://open.fda.gov/ns/spl#guaranteed_analysis_of_feed_table", 
+      "@type": "xsd:string"
+    }, 
+    "health_care_provider_letter": {
+      "@id": "http://open.fda.gov/ns/spl#health_care_provider_letter", 
+      "@type": "xsd:string"
+    }, 
+    "health_care_provider_letter_table": {
+      "@id": "http://open.fda.gov/ns/spl#health_care_provider_letter_table", 
+      "@type": "xsd:string"
+    }, 
+    "health_claim": {
+      "@id": "http://open.fda.gov/ns/spl#health_claim", 
+      "@type": "xsd:string"
+    }, 
+    "health_claim_table": {
+      "@id": "http://open.fda.gov/ns/spl#health_claim_table", 
+      "@type": "xsd:string"
+    }, 
+    "how_supplied": {
+      "@id": "http://open.fda.gov/ns/spl#how_supplied", 
+      "@type": "xsd:string"
+    }, 
+    "how_supplied_table": {
+      "@id": "http://open.fda.gov/ns/spl#how_supplied_table", 
+      "@type": "xsd:string"
+    }, 
+    "inactive_ingredient": {
+      "@id": "http://open.fda.gov/ns/spl#inactive_ingredient", 
+      "@type": "xsd:string"
+    }, 
+    "inactive_ingredient_table": {
+      "@id": "http://open.fda.gov/ns/spl#inactive_ingredient_table", 
+      "@type": "xsd:string"
+    }, 
+    "indications_and_usage": {
+      "@id": "http://open.fda.gov/ns/spl#indications_and_usage", 
+      "@type": "xsd:string"
+    }, 
+    "indications_and_usage_table": {
+      "@id": "http://open.fda.gov/ns/spl#indications_and_usage_table", 
+      "@type": "xsd:string"
+    }, 
+    "information_for_owners_or_caregivers": {
+      "@id": "http://open.fda.gov/ns/spl#information_for_owners_or_caregivers", 
+      "@type": "xsd:string"
+    }, 
+    "information_for_owners_or_caregivers_table": {
+      "@id": "http://open.fda.gov/ns/spl#information_for_owners_or_caregivers_table", 
+      "@type": "xsd:string"
+    }, 
+    "information_for_patients": {
+      "@id": "http://open.fda.gov/ns/spl#information_for_patients", 
+      "@type": "xsd:string"
+    }, 
+    "information_for_patients_table": {
+      "@id": "http://open.fda.gov/ns/spl#information_for_patients_table", 
+      "@type": "xsd:string"
+    }, 
+    "instructions_for_use": {
+      "@id": "http://open.fda.gov/ns/spl#instructions_for_use", 
+      "@type": "xsd:string"
+    }, 
+    "instructions_for_use_table": {
+      "@id": "http://open.fda.gov/ns/spl#instructions_for_use_table", 
+      "@type": "xsd:string"
+    }, 
+    "intended_use_of_the_device": {
+      "@id": "http://open.fda.gov/ns/spl#intended_use_of_the_device", 
+      "@type": "xsd:string"
+    }, 
+    "intended_use_of_the_device_table": {
+      "@id": "http://open.fda.gov/ns/spl#intended_use_of_the_device_table", 
+      "@type": "xsd:string"
+    }, 
+    "labor_and_delivery": {
+      "@id": "http://open.fda.gov/ns/spl#labor_and_delivery", 
+      "@type": "xsd:string"
+    }, 
+    "labor_and_delivery_table": {
+      "@id": "http://open.fda.gov/ns/spl#labor_and_delivery_table", 
+      "@type": "xsd:string"
+    }, 
+    "laboratory_tests": {
+      "@id": "http://open.fda.gov/ns/spl#laboratory_tests", 
+      "@type": "xsd:string"
+    }, 
+    "laboratory_tests_table": {
+      "@id": "http://open.fda.gov/ns/spl#laboratory_tests_table", 
+      "@type": "xsd:string"
+    }, 
+    "mechanism_of_action": {
+      "@id": "http://open.fda.gov/ns/spl#mechanism_of_action", 
+      "@type": "xsd:string"
+    }, 
+    "mechanism_of_action_table": {
+      "@id": "http://open.fda.gov/ns/spl#mechanism_of_action_table", 
+      "@type": "xsd:string"
+    }, 
+    "microbiology": {
+      "@id": "http://open.fda.gov/ns/spl#microbiology", 
+      "@type": "xsd:string"
+    }, 
+    "microbiology_table": {
+      "@id": "http://open.fda.gov/ns/spl#microbiology_table", 
+      "@type": "xsd:string"
+    }, 
+    "nonclinical_toxicology": {
+      "@id": "http://open.fda.gov/ns/spl#nonclinical_toxicology", 
+      "@type": "xsd:string"
+    }, 
+    "nonclinical_toxicology_table": {
+      "@id": "http://open.fda.gov/ns/spl#nonclinical_toxicology_table", 
+      "@type": "xsd:string"
+    }, 
+    "nonteratogenic_effects": {
+      "@id": "http://open.fda.gov/ns/spl#nonteratogenic_effects", 
+      "@type": "xsd:string"
+    }, 
+    "nonteratogenic_effects_table": {
+      "@id": "http://open.fda.gov/ns/spl#nonteratogenic_effects_table", 
+      "@type": "xsd:string"
+    }, 
+    "nursing_mothers": {
+      "@id": "http://open.fda.gov/ns/spl#nursing_mothers", 
+      "@type": "xsd:string"
+    }, 
+    "nursing_mothers_table": {
+      "@id": "http://open.fda.gov/ns/spl#nursing_mothers_table", 
+      "@type": "xsd:string"
+    }, 
+    "other_safety_information": {
+      "@id": "http://open.fda.gov/ns/spl#other_safety_information", 
+      "@type": "xsd:string"
+    }, 
+    "other_safety_information_table": {
+      "@id": "http://open.fda.gov/ns/spl#other_safety_information_table", 
+      "@type": "xsd:string"
+    }, 
+    "overdosage": {
+      "@id": "http://open.fda.gov/ns/spl#overdosage", 
+      "@type": "xsd:string"
+    }, 
+    "overdosage_table": {
+      "@id": "http://open.fda.gov/ns/spl#overdosage_table", 
+      "@type": "xsd:string"
+    }, 
+    "active_ingredient": {
+      "@id": "http://open.fda.gov/ns/spl#active_ingredient", 
+      "@type": "xsd:string"
+    }, 
+    "active_ingredient_table": {
+      "@id": "http://open.fda.gov/ns/spl#active_ingredient_table", 
+      "@type": "xsd:string"
+    }, 
+    "ask_doctor": {
+      "@id": "http://open.fda.gov/ns/spl#ask_doctor", 
+      "@type": "xsd:string"
+    }, 
+    "ask_doctor_table": {
+      "@id": "http://open.fda.gov/ns/spl#ask_doctor_table", 
+      "@type": "xsd:string"
+    }, 
+    "ask_doctor_or_pharmacist": {
+      "@id": "http://open.fda.gov/ns/spl#ask_doctor_or_pharmacist", 
+      "@type": "xsd:string"
+    }, 
+    "ask_doctor_or_pharmacist_table": {
+      "@id": "http://open.fda.gov/ns/spl#ask_doctor_or_pharmacist_table", 
+      "@type": "xsd:string"
+    }, 
+    "do_not_use": {
+      "@id": "http://open.fda.gov/ns/spl#do_not_use", 
+      "@type": "xsd:string"
+    }, 
+    "do_not_use_table": {
+      "@id": "http://open.fda.gov/ns/spl#do_not_use_table", 
+      "@type": "xsd:string"
+    }, 
+    "keep_out_of_reach_of_children": {
+      "@id": "http://open.fda.gov/ns/spl#keep_out_of_reach_of_children", 
+      "@type": "xsd:string"
+    }, 
+    "keep_out_of_reach_of_children_table": {
+      "@id": "http://open.fda.gov/ns/spl#keep_out_of_reach_of_children_table", 
+      "@type": "xsd:string"
+    }, 
+    "pregnancy_or_breast_feeding": {
+      "@id": "http://open.fda.gov/ns/spl#pregnancy_or_breast_feeding", 
+      "@type": "xsd:string"
+    }, 
+    "pregnancy_or_breast_feeding_table": {
+      "@id": "http://open.fda.gov/ns/spl#pregnancy_or_breast_feeding_table", 
+      "@type": "xsd:string"
+    }, 
+    "purpose": {
+      "@id": "http://open.fda.gov/ns/spl#purpose", 
+      "@type": "xsd:string"
+    }, 
+    "purpose_table": {
+      "@id": "http://open.fda.gov/ns/spl#purpose_table", 
+      "@type": "xsd:string"
+    }, 
+    "questions": {
+      "@id": "http://open.fda.gov/ns/spl#questions", 
+      "@type": "xsd:string"
+    }, 
+    "questions_table": {
+      "@id": "http://open.fda.gov/ns/spl#questions_table", 
+      "@type": "xsd:string"
+    }, 
+    "stop_use": {
+      "@id": "http://open.fda.gov/ns/spl#stop_use", 
+      "@type": "xsd:string"
+    }, 
+    "stop_use_table": {
+      "@id": "http://open.fda.gov/ns/spl#stop_use_table", 
+      "@type": "xsd:string"
+    }, 
+    "when_using": {
+      "@id": "http://open.fda.gov/ns/spl#when_using", 
+      "@type": "xsd:string"
+    }, 
+    "when_using_table": {
+      "@id": "http://open.fda.gov/ns/spl#when_using_table", 
+      "@type": "xsd:string"
+    }, 
+    "package_label_principal_display_panel": {
+      "@id": "http://open.fda.gov/ns/spl#package_label_principal_display_panel", 
+      "@type": "xsd:string"
+    }, 
+    "package_label_principal_display_panel_table": {
+      "@id": "http://open.fda.gov/ns/spl#package_label_principal_display_panel_table", 
+      "@type": "xsd:string"
+    }, 
+    "patient_medication_information": {
+      "@id": "http://open.fda.gov/ns/spl#patient_medication_information", 
+      "@type": "xsd:string"
+    }, 
+    "patient_medication_information_table": {
+      "@id": "http://open.fda.gov/ns/spl#patient_medication_information_table", 
+      "@type": "xsd:string"
+    }, 
+    "pediatric_use": {
+      "@id": "http://open.fda.gov/ns/spl#pediatric_use", 
+      "@type": "xsd:string"
+    }, 
+    "pediatric_use_table": {
+      "@id": "http://open.fda.gov/ns/spl#pediatric_use_table", 
+      "@type": "xsd:string"
+    }, 
+    "pharmacodynamics": {
+      "@id": "http://open.fda.gov/ns/spl#pharmacodynamics", 
+      "@type": "xsd:string"
+    }, 
+    "pharmacodynamics_table": {
+      "@id": "http://open.fda.gov/ns/spl#pharmacodynamics_table", 
+      "@type": "xsd:string"
+    }, 
+    "pharmacogenomics": {
+      "@id": "http://open.fda.gov/ns/spl#pharmacogenomics", 
+      "@type": "xsd:string"
+    }, 
+    "pharmacogenomics_table": {
+      "@id": "http://open.fda.gov/ns/spl#pharmacogenomics_table", 
+      "@type": "xsd:string"
+    }, 
+    "pharmacokinetics": {
+      "@id": "http://open.fda.gov/ns/spl#pharmacokinetics", 
+      "@type": "xsd:string"
+    }, 
+    "pharmacokinetics_table": {
+      "@id": "http://open.fda.gov/ns/spl#pharmacokinetics_table", 
+      "@type": "xsd:string"
+    }, 
+    "precautions": {
+      "@id": "http://open.fda.gov/ns/spl#precautions", 
+      "@type": "xsd:string"
+    }, 
+    "precautions_table": {
+      "@id": "http://open.fda.gov/ns/spl#precautions_table", 
+      "@type": "xsd:string"
+    }, 
+    "pregnancy": {
+      "@id": "http://open.fda.gov/ns/spl#pregnancy", 
+      "@type": "xsd:string"
+    }, 
+    "pregnancy_table": {
+      "@id": "http://open.fda.gov/ns/spl#pregnancy_table", 
+      "@type": "xsd:string"
+    }, 
+    "recent_major_changes": {
+      "@id": "http://open.fda.gov/ns/spl#recent_major_changes", 
+      "@type": "xsd:string"
+    }, 
+    "recent_major_changes_table": {
+      "@id": "http://open.fda.gov/ns/spl#recent_major_changes_table", 
+      "@type": "xsd:string"
+    }, 
+    "references": {
+      "@id": "http://open.fda.gov/ns/spl#references", 
+      "@type": "xsd:string"
+    }, 
+    "references_table": {
+      "@id": "http://open.fda.gov/ns/spl#references_table", 
+      "@type": "xsd:string"
+    }, 
+    "residue_warning": {
+      "@id": "http://open.fda.gov/ns/spl#residue_warning", 
+      "@type": "xsd:string"
+    }, 
+    "residue_warning_table": {
+      "@id": "http://open.fda.gov/ns/spl#residue_warning_table", 
+      "@type": "xsd:string"
+    }, 
+    "risks": {
+      "@id": "http://open.fda.gov/ns/spl#risks", 
+      "@type": "xsd:string"
+    }, 
+    "risks_table": {
+      "@id": "http://open.fda.gov/ns/spl#risks_table", 
+      "@type": "xsd:string"
+    }, 
+    "route": {
+      "@id": "http://open.fda.gov/ns/spl#route", 
+      "@type": "xsd:string"
+    }, 
+    "route_table": {
+      "@id": "http://open.fda.gov/ns/spl#route_table", 
+      "@type": "xsd:string"
+    }, 
+    "safe_handling_warning": {
+      "@id": "http://open.fda.gov/ns/spl#safe_handling_warning", 
+      "@type": "xsd:string"
+    }, 
+    "safe_handling_warning_table": {
+      "@id": "http://open.fda.gov/ns/spl#safe_handling_warning_table", 
+      "@type": "xsd:string"
+    }, 
+    "spl_indexing_data_elements": {
+      "@id": "http://open.fda.gov/ns/spl#spl_indexing_data_elements", 
+      "@type": "xsd:string"
+    }, 
+    "spl_indexing_data_elements_table": {
+      "@id": "http://open.fda.gov/ns/spl#spl_indexing_data_elements_table", 
+      "@type": "xsd:string"
+    }, 
+    "spl_product_data_elements": {
+      "@id": "http://open.fda.gov/ns/spl#spl_product_data_elements", 
+      "@type": "xsd:string"
+    }, 
+    "spl_product_data_elements_table": {
+      "@id": "http://open.fda.gov/ns/spl#spl_product_data_elements_table", 
+      "@type": "xsd:string"
+    }, 
+    "spl_medguide": {
+      "@id": "http://open.fda.gov/ns/spl#spl_medguide", 
+      "@type": "xsd:string"
+    }, 
+    "spl_medguide_table": {
+      "@id": "http://open.fda.gov/ns/spl#spl_medguide_table", 
+      "@type": "xsd:string"
+    }, 
+    "spl_patient_package_insert": {
+      "@id": "http://open.fda.gov/ns/spl#spl_patient_package_insert", 
+      "@type": "xsd:string"
+    }, 
+    "spl_patient_package_insert_table": {
+      "@id": "http://open.fda.gov/ns/spl#spl_patient_package_insert_table", 
+      "@type": "xsd:string"
+    }, 
+    "spl_unclassified_section": {
+      "@id": "http://open.fda.gov/ns/spl#spl_unclassified_section", 
+      "@type": "xsd:string"
+    }, 
+    "spl_unclassified_section_table": {
+      "@id": "http://open.fda.gov/ns/spl#spl_unclassified_section_table", 
+      "@type": "xsd:string"
+    }, 
+    "statement_of_identity": {
+      "@id": "http://open.fda.gov/ns/spl#statement_of_identity", 
+      "@type": "xsd:string"
+    }, 
+    "statement_of_identity_table": {
+      "@id": "http://open.fda.gov/ns/spl#statement_of_identity_table", 
+      "@type": "xsd:string"
+    }, 
+    "storage_and_handling": {
+      "@id": "http://open.fda.gov/ns/spl#storage_and_handling", 
+      "@type": "xsd:string"
+    }, 
+    "storage_and_handling_table": {
+      "@id": "http://open.fda.gov/ns/spl#storage_and_handling_table", 
+      "@type": "xsd:string"
+    }, 
+    "summary_of_safety_and_effectiveness": {
+      "@id": "http://open.fda.gov/ns/spl#summary_of_safety_and_effectiveness", 
+      "@type": "xsd:string"
+    }, 
+    "summary_of_safety_and_effectiveness_table": {
+      "@id": "http://open.fda.gov/ns/spl#summary_of_safety_and_effectiveness_table", 
+      "@type": "xsd:string"
+    }, 
+    "teratogenic_effects": {
+      "@id": "http://open.fda.gov/ns/spl#teratogenic_effects", 
+      "@type": "xsd:string"
+    }, 
+    "teratogenic_effects_table": {
+      "@id": "http://open.fda.gov/ns/spl#teratogenic_effects_table", 
+      "@type": "xsd:string"
+    }, 
+    "troubleshooting": {
+      "@id": "http://open.fda.gov/ns/spl#troubleshooting", 
+      "@type": "xsd:string"
+    }, 
+    "troubleshooting_table": {
+      "@id": "http://open.fda.gov/ns/spl#troubleshooting_table", 
+      "@type": "xsd:string"
+    }, 
+    "use_in_specific_populations": {
+      "@id": "http://open.fda.gov/ns/spl#use_in_specific_populations", 
+      "@type": "xsd:string"
+    }, 
+    "use_in_specific_populations_table": {
+      "@id": "http://open.fda.gov/ns/spl#use_in_specific_populations_table", 
+      "@type": "xsd:string"
+    }, 
+    "user_safety_warnings": {
+      "@id": "http://open.fda.gov/ns/spl#user_safety_warnings", 
+      "@type": "xsd:string"
+    }, 
+    "user_safety_warnings_table": {
+      "@id": "http://open.fda.gov/ns/spl#user_safety_warnings_table", 
+      "@type": "xsd:string"
+    }, 
+    "veterinary_indications": {
+      "@id": "http://open.fda.gov/ns/spl#veterinary_indications", 
+      "@type": "xsd:string"
+    }, 
+    "veterinary_indications_table": {
+      "@id": "http://open.fda.gov/ns/spl#veterinary_indications_table", 
+      "@type": "xsd:string"
+    }, 
+    "warnings_and_cautions": {
+      "@id": "http://open.fda.gov/ns/spl#warnings_and_cautions", 
+      "@type": "xsd:string"
+    }, 
+    "warnings_and_cautions_table": {
+      "@id": "http://open.fda.gov/ns/spl#warnings_and_cautions_table", 
+      "@type": "xsd:string"
+    }, 
+    "warnings": {
+      "@id": "http://open.fda.gov/ns/spl#warnings", 
+      "@type": "xsd:string"
+    }, 
+    "warnings_table": {
+      "@id": "http://open.fda.gov/ns/spl#warnings_table", 
+      "@type": "xsd:string"
+    }, 
+    "openfda": {
+      "application_number": {
+        "@id": "http://open.fda.gov/ns/spl#application_number", 
+        "@type": "xsd:string"
+      }, 
+      "application_number_exact": {
+        "@id": "http://open.fda.gov/ns/spl#application_number_exact", 
+        "@type": "xsd:string"
+      }, 
+      "brand_name": {
+        "@id": "http://open.fda.gov/ns/spl#brand_name", 
+        "@type": "xsd:string"
+      }, 
+      "brand_name_exact": {
+        "@id": "http://open.fda.gov/ns/spl#brand_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "substance_name": {
+        "@id": "http://open.fda.gov/ns/spl#substance_name", 
+        "@type": "xsd:string"
+      }, 
+      "substance_name_exact": {
+        "@id": "http://open.fda.gov/ns/spl#substance_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "dosage_form": {
+        "@id": "http://open.fda.gov/ns/spl#dosage_form", 
+        "@type": "xsd:string"
+      }, 
+      "dosage_form_exact": {
+        "@id": "http://open.fda.gov/ns/spl#dosage_form_exact", 
+        "@type": "xsd:string"
+      }, 
+      "generic_name": {
+        "@id": "http://open.fda.gov/ns/spl#generic_name", 
+        "@type": "xsd:string"
+      }, 
+      "generic_name_exact": {
+        "@id": "http://open.fda.gov/ns/spl#generic_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_name": {
+        "@id": "http://open.fda.gov/ns/spl#manufacturer_name", 
+        "@type": "xsd:string"
+      }, 
+      "manufacturer_name_exact": {
+        "@id": "http://open.fda.gov/ns/spl#manufacturer_name_exact", 
+        "@type": "xsd:string"
+      }, 
+      "product_ndc": {
+        "@id": "http://open.fda.gov/ns/spl#product_ndc", 
+        "@type": "xsd:string"
+      }, 
+      "product_ndc_exact": {
+        "@id": "http://open.fda.gov/ns/spl#product_ndc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "product_type": {
+        "@id": "http://open.fda.gov/ns/spl#product_type", 
+        "@type": "xsd:string"
+      }, 
+      "product_type_exact": {
+        "@id": "http://open.fda.gov/ns/spl#product_type_exact", 
+        "@type": "xsd:string"
+      }, 
+      "route": {
+        "@id": "http://open.fda.gov/ns/spl#route", 
+        "@type": "xsd:string"
+      }, 
+      "route_exact": {
+        "@id": "http://open.fda.gov/ns/spl#route_exact", 
+        "@type": "xsd:string"
+      }, 
+      "rxcui": {
+        "@id": "http://open.fda.gov/ns/spl#rxcui", 
+        "@type": "xsd:string"
+      }, 
+      "rxcui_exact": {
+        "@id": "http://open.fda.gov/ns/spl#rxcui_exact", 
+        "@type": "xsd:string"
+      }, 
+      "rxstring": {
+        "@id": "http://open.fda.gov/ns/spl#rxstring", 
+        "@type": "xsd:string"
+      }, 
+      "rxstring_exact": {
+        "@id": "http://open.fda.gov/ns/spl#rxstring_exact", 
+        "@type": "xsd:string"
+      }, 
+      "rxtty": {
+        "@id": "http://open.fda.gov/ns/spl#rxtty", 
+        "@type": "xsd:string"
+      }, 
+      "rxtty_exact": {
+        "@id": "http://open.fda.gov/ns/spl#rxtty_exact", 
+        "@type": "xsd:string"
+      }, 
+      "spl_id": {
+        "@id": "http://open.fda.gov/ns/spl#spl_id", 
+        "@type": "xsd:string"
+      }, 
+      "spl_id_exact": {
+        "@id": "http://open.fda.gov/ns/spl#spl_id_exact", 
+        "@type": "xsd:string"
+      }, 
+      "package_ndc": {
+        "@id": "http://open.fda.gov/ns/spl#package_ndc", 
+        "@type": "xsd:string"
+      }, 
+      "package_ndc_exact": {
+        "@id": "http://open.fda.gov/ns/spl#package_ndc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "spl_set_id": {
+        "@id": "http://open.fda.gov/ns/spl#spl_set_id", 
+        "@type": "xsd:string"
+      }, 
+      "spl_set_id_exact": {
+        "@id": "http://open.fda.gov/ns/spl#spl_set_id_exact", 
+        "@type": "xsd:string"
+      }, 
+      "unii": {
+        "@id": "http://open.fda.gov/ns/spl#unii", 
+        "@type": "xsd:string"
+      }, 
+      "unii_exact": {
+        "@id": "http://open.fda.gov/ns/spl#unii_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_moa": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_moa", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_moa_exact": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_moa_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_pe": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_pe", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_pe_exact": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_pe_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_cs": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_cs", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_cs_exact": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_cs_exact", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_epc": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_epc", 
+        "@type": "xsd:string"
+      }, 
+      "pharm_class_epc_exact": {
+        "@id": "http://open.fda.gov/ns/spl#pharm_class_epc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "nui": {
+        "@id": "http://open.fda.gov/ns/spl#nui", 
+        "@type": "xsd:string"
+      }, 
+      "nui_exact": {
+        "@id": "http://open.fda.gov/ns/spl#nui_exact", 
+        "@type": "xsd:string"
+      }, 
+      "upc": {
+        "@id": "http://open.fda.gov/ns/spl#upc", 
+        "@type": "xsd:string"
+      }, 
+      "upc_exact": {
+        "@id": "http://open.fda.gov/ns/spl#upc_exact", 
+        "@type": "xsd:string"
+      }, 
+      "is_original_packager": {
+        "@id": "http://open.fda.gov/ns/spl#is_original_packager", 
+        "@type": "xsd:boolean"
+      }, 
+      "is_original_packager_exact": {
+        "@id": "http://open.fda.gov/ns/spl#is_original_packager_exact", 
+        "@type": "xsd:boolean"
+      }
+    }, 
+    "@timestamp": {
+      "@id": "http://open.fda.gov/ns/spl#@timestamp", 
+      "@type": "xsd:date"
+    }
+  }
+}
